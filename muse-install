@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# muse-install — ek command me koi bhi GitHub repo install karo.
+# Usage: muse-install owner/repo [--dry-run] [--update] [--force]
+# PATH me daalo: export PATH="$HOME/workspace/muse-auto-installer:$PATH"
+set -e
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec python3 "$DIR/install.py" "$@"
